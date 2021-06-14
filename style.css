@@ -43,6 +43,7 @@
     .logo > .logo__img{
         cursor: pointer;
     }
+    /* navbar */
     .navbar__top{
         width: 100%;
     }
