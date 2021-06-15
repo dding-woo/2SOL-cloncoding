@@ -22,6 +22,11 @@
         /*Animation*/
         --animation-duration: 300ms; /*300ms:사람이 가장 흥미를 가지면서 지루하지 않은 초*/
 }
+    /* section */
+    .section{
+        padding: 2rem 1.2rem 2rem;
+        height: auto;
+    }
     /*  header  */
     #header{
         width: 100%;
@@ -106,3 +111,75 @@
         top: 20px;
         transition: all 0.3s ease-out;
     }
+/* home */
+    #home{
+        width: 100%;
+        height: auto;
+        font-family: 'Nanum Myeongjo', serif;
+    }
+    
+    .intro__container{
+        max-width: 80rem;
+        margin: 0 auto;
+        position: relative;
+    }
+    .intro__title{
+        font-size: 3rem;
+        font-weight: 700;
+        animation: fadein 0.7s 0.5s ease-out forwards;
+        opacity: 0;
+        margin: 2rem 0;
+    }
+    .intro__subtitle{
+        font-size: 2rem;
+        font-weight: 500;
+        animation: fadein 0.7s 0.9s ease-out forwards;
+        opacity: 0;
+    }
+    .intro__desc{
+        margin:1.5rem 0;
+        font-size:1.5rem;
+        animation: fadein 0.7s 1.3s ease-out forwards;
+        opacity: 0;
+    }
+    @keyframes fadein {
+        0%{
+            transform: translateY(10px);
+        
+        }
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    .intro__container .intro__desc:nth-child(3){
+        margin-top: 3rem;
+    }
+    .scroll__under{
+        width: 30px;
+        height: 40px;
+        border: 1px solid var(--color-black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        padding: 7px 3px 7px 3px;
+        margin: 0 auto;
+        opacity: 0;
+        animation: floatingscroll 2.5s 2.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    }
+    @keyframes floatingscroll {
+        0%{
+            opacity: 1;
+            transform: translateY(5px);
+        }
+        50%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(5px);
+            
+        }
+        
